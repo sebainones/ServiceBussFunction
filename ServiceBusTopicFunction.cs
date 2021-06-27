@@ -10,7 +10,7 @@ namespace MessageQueueFunctionApp
         [FunctionName("ServiceBusTopicFunction")]
         public static void Run([ServiceBusTrigger("ghaseeltopic", "ghaseeltopicsubscription", Connection = "ServiceBusConnection")]string mySbMsg, ILogger log)
         {
-            log.LogInformation($"C# ServiceBus topic trigger function message: {mySbMsg}");
+            log.LogInformation($"C# ServiceBus topic trigger function message: {mySbMsg}", null);
         }
     }
 }
