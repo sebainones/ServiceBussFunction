@@ -18,9 +18,9 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore .\MessageQueueFunctionApp.csproj
+      run: dotnet restore ./MessageQueueFunctionApp.csproj
     
     - name: Build 🏭
-      run: dotnet build --no-restore .\MessageQueueFunctionApp.csproj
+      run: dotnet build --no-restore ./MessageQueueFunctionApp.csproj
 #    - name: Test
 #      run: dotnet test --no-build --verbosity normal
