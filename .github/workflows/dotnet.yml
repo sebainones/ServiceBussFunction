@@ -1,4 +1,4 @@
-name: .NET
+name: .NET CI 🚧
 
 on:
   push:
@@ -18,8 +18,9 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
+      run: dotnet restore .\MessageQueueFunctionApp.csproj
+    
+    - name: Build 🏭
+      run: dotnet build --no-restore .\MessageQueueFunctionApp.csproj
 #    - name: Test
 #      run: dotnet test --no-build --verbosity normal
